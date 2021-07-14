@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+<body>
+    <form action="{{ url_for("dataset") }}" method="post" align="center" >
+            <table align="center">
+                <tr>
+                    <select name="database">
+                        <label>Select database</label>
+                        <option value="1" >Database - 1</option>
+                        <option value="2" >Database - 2</option>
+                        <option value="3" >Database - 3</option>
+                    </select>
+                </tr>
+                <td>
+                    <tr>
+                    <td>   <label>Enter number of iteration</label> </td>
+                    <td>   <input name="iteration" type="text" placeholder="no of iteration" /> </td>   
+                    </tr>
+                    
+                    <tr>
+                        <td>   <label>Enter value for P</label> </td>
+                        <td>   <input name="p" type="text" placeholder="Value for p" /> </td>   
+                    </tr>
+
+                    <tr>
+                        <td>   <label>Enter value for d</label> </td>
+                        <td>   <input name="d" type="text" placeholder="Value for d" /> </td>   
+                    </tr>
+                
+                </td>    
+            </table>
+            
+            <button type="submit" >Submit</button>
+
+    </form>
+    
+</body>
+</html>
