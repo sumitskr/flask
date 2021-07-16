@@ -19,8 +19,7 @@ def dataset():
         d = request.form.get('d')
         iteration = request.form.get("iteration")
         database = request.form.get('database')
-        context =get_dataset(database,int(p),int(d),int(iteration))
-        # print(get_dataset(database,int(p),int(d),int(iteration)))
+        context = get_dataset(database,int(p),int(d),int(iteration))[int(iteration)-1]
 
         return render_template("dataset.html",context=context)
 

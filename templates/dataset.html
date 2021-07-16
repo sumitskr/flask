@@ -8,18 +8,29 @@
     <table align="center">
         <!-- {'Init_Score': array([24, 23]), 'Global_Best': '23', 'Optimal_solution': '[ 586 5860 6316]', 'Iteration': 0} -->
         <ul id="navigation">
-            {% for item in context %}
+            <!-- Jinja2 operations -->
            
-                <h3>Iteration No. {{ item.Iteration }}</h3>
-                <h5>Final Score: {{ item.Init_Score }}</h5>
-                <p>Global Best : {{ item.Global_Best }}</p>
-                <p>Optimal Solution : {{ item.Optimal_solution }}</p>
+                <h3>After  {{ context.Iteration }} numbers of Iterations</h3>
+                <h5>Final Score: {{ context.Init_Score }}</h5>
+                <p>Global Best : {{ context.Global_Best }}</p>
+                <p>Optimal Solution : {{ context.Optimal_solution }}</p>
+                <h>Final Index : 
+                    {% for i in context.position %}
+                        <p style="padding-left: 25px;">{{ i }}</p>
+                    {% endfor %}
+                </p>
+
+            <!-- Jinja2 operations -->
                 <hr>
-            {% endfor %}
+         
         </ul>
     </table>
 </head>
 <body>
     
 </body>
+<script>
+
+var context = "{{ context|safe }}";
+</script>
 </html>

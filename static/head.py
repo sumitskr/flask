@@ -196,6 +196,7 @@ def get_dataset(dataset_no,p,d,iteration):
 #         else:
 #             d[i]['final score':]
         data=main_pso(position,pBest,velocity,init_score)
-        data['Iteration']=i
+        data['Iteration']=i+1
         data_list.append(data)
+    data_list[-1]['position']=position
     return data_list
